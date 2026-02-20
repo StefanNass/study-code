@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void changeSecondLetter(char *text) {
+void changeSecondLetter(char text[]) {
     text[1] = 'c';
 }
 
