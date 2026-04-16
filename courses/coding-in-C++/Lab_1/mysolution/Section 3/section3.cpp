@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdint>
+#include <limits>
 
 namespace validation{
     
@@ -31,13 +32,13 @@ int main(){
         if (!(std::cin >> tempAge)){
             std::cout << "You did not enter a valid number. Please try again." << std::endl;
             std::cin.clear();
-            std::cin.ignore(1000, '\n');
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             continue;
         }
         else if (tempAge > 120 || tempAge < 0){
             std::cout << "You did not enter a valid number. Please try again." << std::endl;
             std::cin.clear();
-            std::cin.ignore(1000, '\n');
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             continue;
         }
         else{
