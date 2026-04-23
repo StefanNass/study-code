@@ -1,4 +1,4 @@
-# Fehlersuche
+# Part 1: Fehlersuche
 
 ## Fehler 1
 class Article {
@@ -66,3 +66,22 @@ double getPrice() {
     }
 
 konstante Funktion markieren
+
+
+# Part 2:
+
+## Frage 1
+Why is the use of new for the category attribute problematic in this case?
+Es wird kein Destruktor aufgerufen, der reservierte Speicher wird nicht mehr freigegeben
+
+## Frage 2
+What could happen if multiple objects of this class are copied?
+Änderungen an category wirkt sich auf mehrere Objekte aus
+
+## Frage 3
+Why should some methods be marked as const?
+Die Methoden können nicht versehentlich verändert werden, sie können auch auf konstante Objekte angewendet werden
+
+## Frage 4
+What risks arise from allowing direct access to price and stock?
+Jeder kann die Werte verändern, es gibt keine Kontrolle für ungültige Änderungen.
