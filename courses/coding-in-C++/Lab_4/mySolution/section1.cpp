@@ -45,6 +45,14 @@ Vector2D operator+(Vector2D v1, Vector2D v2){
     return Vector2D(v1.get_x() + v2.get_x(), v1.get_y() + v2.get_y());
 }
 
+Vector2D operator*(Vector2D v, int num){
+    return Vector2D(v.get_x() * num, v.get_y() * num);
+}
+
+Vector2D operator*(int num, Vector2D v){
+    return Vector2D(v.get_x() * num, v.get_y() * num);
+}
+
 
 
 
@@ -69,5 +77,13 @@ int main(){
     std::cout << "Vektor 3: " << std::endl;
     v3.print();
 
+    Vector2D v4 = v1 * 2;
+    Vector2D v5 = 3 * v1;
+
+    std::cout << "Vektor 4: " << std::endl;
+    v4.print();
+
+    std::cout << "Vektor 5: " << std::endl;
+    v5.print();
     return 0;
 }
