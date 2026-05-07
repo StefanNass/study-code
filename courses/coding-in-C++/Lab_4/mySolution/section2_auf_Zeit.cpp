@@ -62,5 +62,9 @@ int main(){
     for(int i = 0; i <=3; i++){
         std::cout << shapes[i]->area() << std::endl;
     }
+
+    for (int i = 0; i <= 3; i++) {
+        delete shapes[i];
+    }
     return 0;
 }
